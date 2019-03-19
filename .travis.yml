@@ -1,0 +1,16 @@
+language: python
+python:
+- '2.7'
+- '3.6'
+- pypy
+script: echo skip test
+deploy:
+  skip_existing: true
+  provider: pypi
+  user: codeskyblue
+  password:
+    secure: bxCjcSCFJ1jZC3tKVx3XaLWxZIvJ7Lr3BCbS3VRNAG0Joo+OdvjIYcehx/wLbVJYOA7g+ICJonRMB77ufTr+zq2zGOsNZMOYrU6TQ1xwWB3Xk2IipMAZwjKwxpMmmVvo5V2gZmaXq3uLesVwC7cYMyfn3pm3Ax951hkjM2tqqQcm+iEIeW9uEXamVxwnxjZpcBP4RAGAn6sk9m3asTcj8G8OOQiZYXk4gXgf+aiV1afOCPssOeZ6PJW2S1yJrwxCwuXsjirT5noQXoUwHMf6F61Eqy4PbYXCBkfmJ3P32hBuXyI3HxYX/hzKMAt9b8nqxoXpDtwVqtCiSlXPzAWCruJrajgWIjIUSgDLALDhX609Qlq3Zxos8b0SX2UrKQc/dlDm7jtvpmwq0T6M65AHMJ5k99kPIplYSrt4Q2lKnClnvbeg2FY0f5D+7mD50O+m+s03dHqz0HEjo85UsrSef8BGXUhDbntpYhYNrI8sXeYjcg/bXWVA1Bqn8OLnTH528XgICJU2IMjTuKCwigVgFZcwyPM8MoJm7b1nPDI3jtEF3mDZUg6NP6il2RIPqWoiY4wvNBr8DlgeGQIT4aFJF7mFrw6S9byDjMSBXKgjalVPLzdr586ApNvC1rcYVpT02nLqrqRQo6S7ssxzFYmcWpPhnciiTisxxxYqzqGCZIE=
+  on:
+    tags: true
+    distributions: sdist bdist_wheel
+    repo: codeskyblue/fibonacci
